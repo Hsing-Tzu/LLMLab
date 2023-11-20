@@ -1,0 +1,1215 @@
+"defaultPython is a popular programming language.
+Python can be used on a server to create web applications.
+With our ""Try it Yourself"" editor, you can edit Python code and view the result.
+Click on the ""Try it Yourself"" button to see how it works.
+In our File Handling section you will learn how to open, read, write, and 
+delete files.
+Python File Handling
+In our database section you will learn how to access and work with MySQL and MongoDB databases:
+Python MySQL Tutorial
+Python MongoDB Tutorial
+Insert the missing part of the code below to output ""Hello World"".
+Start the Exercise
+Learn by examples! This tutorial supplements all explanations with clarifying examples.
+See All Python Examples
+Test your Python skills with a quiz.
+Python Quiz
+Track your progress with the free ""My Learning"" program here at W3Schools.
+Log in to your account, and start earning points!
+This is an optional feature. You can study W3Schools without using My Learning.
+You will also find complete function and method references:
+Reference Overview
+Built-in Functions
+String Methods
+List/Array Methods
+Dictionary Methods
+Tuple Methods
+Set Methods
+File Methods
+Python Keywords
+Python Exceptions
+Python Glossary
+Random Module
+Requests Module
+Math Module
+CMath Module
+Download Python from the official Python web site:
+  https://python.org
+Get certified by completing the  course"
+"python_introPython is a popular programming language. It was created by Guido van Rossum, 
+and released in 1991.
+It is used for:"
+"python_getstartedMany PCs and Macs will have python already installed.
+To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):
+To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:
+If you find that you do not have Python installed on your computer, then you can download it for free from the following website: https://www.python.org/
+Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.
+The way to run a python file is like this on the command line:
+Where ""helloworld.py"" is the name of your python file.
+Let's write our first Python file, called helloworld.py, which can be done in any text editor.
+helloworld.py
+Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:
+The output should read:
+Congratulations, you have written and executed your first Python program.
+To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file. This is made possible because Python can be run as a command line itself.
+Type the following on the Windows, Mac or Linux command line:
+From there you can write any python, including our hello world example from earlier in the tutorial:
+Which will write ""Hello, World!"" in the command line:
+Whenever you are done in the python command line, you can simply type the following to quit the python command line interface:"
+"python_syntaxAs we learned in the previous page, Python syntax can be executed by writing directly in the Command Line:
+Or by creating a python file on the server, using the .py file extension, and running it in the Command Line:
+Indentation refers to the spaces at the beginning of a code line.
+Where in other programming languages the indentation in code is for readability 
+only, the indentation in Python is very important.
+Python uses indentation to indicate a block of code.
+Python will give you an error if you skip the indentation:
+Syntax Error:
+The number of spaces is up to you as a programmer, the most common use is four, but it has 
+to be at least one.
+You have to use the same number of spaces in the same block of code, 
+otherwise Python will give you an error:
+Syntax Error:
+In Python, variables are created when you assign a value to it:
+
+Example
+Variables in Python:
+
+  x = 5y = ""Hello, World!""
+
+Try it Yourself »
+
+Python has no command for declaring a variable.
+You will learn more about variables in the 
+Python Variables chapter.
+
+
+Comments
+Python has commenting capability for the purpose of in-code documentation.
+Comments start with a #, and Python will render the rest of the line as a comment:
+
+Example
+Comments in Python:
+
+#This is a comment.
+print(""Hello, World!"")
+
+Try it Yourself »
+
+
+
+
+Test Yourself With Exercises
+
+Exercise:
+Insert the missing part of the code below to output ""Hello World"".
+
+
+(""Hello World"")
+
+
+
+Submit Answer »
+Start the Exercise
+
+
+
+
+❮ Previous
+Next ❯
+
+
+
+
+
+
+
+
+
+
+
+★
++1
+
+
+
+Variables in Python:
+Python has no command for declaring a variable.
+You will learn more about variables in the 
+Python Variables chapter.
+Python has commenting capability for the purpose of in-code documentation.
+Comments start with a #, and Python will render the rest of the line as a comment:
+
+Example
+Comments in Python:
+
+#This is a comment.
+print(""Hello, World!"")
+
+Try it Yourself »
+
+
+
+
+Test Yourself With Exercises
+
+Exercise:
+Insert the missing part of the code below to output ""Hello World"".
+
+
+(""Hello World"")
+
+
+
+Submit Answer »
+Start the Exercise
+
+
+
+
+❮ Previous
+Next ❯
+
+
+
+
+
+
+
+
+
+
+
+★
++1
+
+
+
+Comments in Python:
+Insert the missing part of the code below to output ""Hello World"".
+Start the Exercise"
+"python_commentsComments can be used to explain Python code.
+Comments can be used to make the code more readable.
+Comments can be used to prevent execution when testing code.
+Comments starts with a #, and Python will 
+ignore them:
+Comments can be placed at the end of a line, and Python will ignore the rest 
+of the line:
+A comment does not have to be text that explains the code, it can also be used to 
+prevent Python from executing code:
+Python does not really have a syntax for multiline comments.
+To add a multiline comment you could insert a # for each line:
+Or, not quite as intended, you can use a multiline string.
+Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it:
+As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment.
+Comments in Python are written with a special character, which one?
+Start the Exercise"
+"python_variablesVariables are containers for storing data values.
+Python has no command for declaring a variable.
+A variable is created the moment you first assign a value to it.
+Variables do not need to be declared with any particular type, and can even change type after they have been set.
+If you want to specify the data type of a variable, this can be done with casting.
+You can get the data type of a variable with the type() function.
+String variables can be declared either by using single or double quotes:
+Variable names are case-sensitive.
+This will create two variables:"
+"python_variables_exercisesNow you have learned a lot about variables, and how to use them in Python.
+Are you ready for a test?
+Try to insert the missing part to make the code work as expected:
+Create a variable named carname and assign the value Volvo to it.
+Go to the Exercise section and test all of our Python Variable Exercises:
+
+Python Variable Exercises
+"
+"python_datatypesIn programming, data type is an important concept.
+Variables can store data of different types, and different types can do 
+different things.
+Python has the following data types built-in by default, in these categories:
+You can get the data type of any object by using the type() function:
+Print the data type of the variable x:
+In Python, the data type is set when you assign a value to a variable:
+If you want to specify the data type, you can use the following 
+constructor functions:
+The following code example would print the data type of x, what data type would that be?
+Start the Exercise"
+"python_castingThere may be times when you want to specify a type on to a variable. This can be done with casting. Python is an object-orientated language, and as such it uses classes to define data types, including its primitive types.
+Casting in python is therefore done using constructor functions:
+Integers:
+Floats:
+Strings:"
+"python_stringsStrings in python are surrounded by either single quotation marks, or double quotation marks.
+'hello' is the same as ""hello"".
+You can display a string literal with the print() function:
+Assigning a string to a variable is done with the variable name followed by 
+an equal sign and the string:
+You can assign a multiline string to a variable by using three quotes:
+You can use three double quotes:
+Or three single quotes:
+Note: in the result, the line breaks are inserted at the same position as in the code.
+Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.
+However, Python does not have a character data type, a single character is simply a string with a length of 1.
+Square brackets can be used to access elements of the string.
+Get the character at position 1 (remember that the first character has the 
+position 0):
+Since strings are arrays, we can loop through the characters in a string, with a for loop.
+Loop through the letters in the word ""banana"":
+Learn more about For Loops in our Python For Loops chapter.
+To get the length of a string, use the len() function.
+The len() function returns the length of a string:
+To check if a certain phrase or character is present in a string, we can use 
+the keyword 
+in.
+Check if ""free"" is present in the following text:
+Use it in an if statement:
+Print only if ""free"" is present:
+Learn more about If statements in our Python 
+If...Else chapter.
+To check if a certain phrase or character is NOT present in a string, we can use 
+the keyword not in.
+Check if ""expensive"" is NOT present in the following text:
+Use it in an if statement:
+print only if ""expensive"" is NOT present:"
+"python_strings_exercisesNow you have learned a lot about Strings, and how to use them in Python.
+Are you ready for a test?
+Try to insert the missing part to make the code work as expected:
+Use the len method to print the length of the string.
+Go to the Exercise section and test all of our Python Strings Exercises:
+
+Python String Exercises
+"
+"python_strings_exercisesNow you have learned a lot about Strings, and how to use them in Python.
+Are you ready for a test?
+Try to insert the missing part to make the code work as expected:
+Use the len method to print the length of the string.
+Go to the Exercise section and test all of our Python Strings Exercises:
+
+Python String Exercises
+"
+"python_booleansBooleans represent one of two values: 
+True or False.
+In programming you often need to know if an expression is 
+True or False.
+You can evaluate any expression in Python, and get one of two 
+answers, 
+True or False.
+When you compare two values, the expression is evaluated and Python returns 
+the Boolean answer:
+When you run a condition in an if statement, Python returns 
+True or False:
+Print a message based on whether the condition is True or 
+  False:
+The bool() function allows you to evaluate 
+any value, and give you 
+True or False 
+in return,
+Evaluate a string and a number:
+Evaluate two variables:
+Almost any value is evaluated to True if it 
+has some sort of content.
+Any string is True, except empty strings.
+Any number is True, except 
+0.
+Any list, tuple, set, and dictionary are True, except 
+empty ones.
+The following will return True:
+In fact, there are not many values that evaluate to
+False, except empty values, such as (),
+[], {}, 
+"""", the number
+0, and the value None. 
+And of course the value False evaluates to
+False.
+The following will return False:
+One more value, or object in this case, evaluates to 
+False, and that is if you have an object that 
+is made from a class with a __len__ function that returns 
+0 or 
+False: 
+You can create functions that returns a Boolean Value:
+Print the answer of a function:
+You can execute code based on the Boolean answer of a function:
+Print ""YES!"" if the function returns True, otherwise print ""NO!"":
+Python also has many built-in functions that return a boolean value, like the 
+isinstance() 
+function, which can be used to determine if an object is of a certain data type:
+Check if an object is an integer or not:
+The statement below would print a Boolean value, which one?
+Start the Exercise"
+"python_listsLists are used to store multiple items in a single variable.
+Lists are one of 4 built-in data types in Python used to store collections of 
+data, the other 3 are Tuple, 
+Set, and Dictionary, all with different qualities and usage.
+Lists are created using square brackets:
+Create a List:
+List items are ordered, changeable, and allow duplicate values.
+List items are indexed, the first item has index [0],
+the second item has index [1] etc.
+When we say that lists are ordered, it means that the items have a defined order, and that order will not change.
+If you add new items to a list,
+the new items will be placed at the end of the list.
+Note: There are some list methods that will change the order, but in general: the order of the items will not change.
+The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+Since lists are indexed, lists can have items with the same value:
+Lists allow duplicate values:
+To determine how many items a list has, use the 
+len() function:
+Print the number of items in the list:
+List items can be of any data type:
+String, int and boolean data types:
+A list can contain different data types:
+A list with strings, integers and boolean values:
+From Python's perspective, lists are defined as objects with the data type 'list':
+What is the data type of a list?
+It is also possible to use the list() constructor when creating a 
+new list.
+Using the list() constructor to make a List:
+There are four collection data types in the Python programming language:
+*Set items are unchangeable, but you can remove and/or add items 
+  whenever you like.
+**As of Python version 3.7, dictionaries are ordered. 
+  In Python 3.6 and earlier, dictionaries are unordered.
+When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security."
+"python_lists_exercisesNow you have learned a lot about lists, and how to use them in Python.
+Are you ready for a test?
+Try to insert the missing part to make the code work as expected:
+Print the second item in the fruits list.
+Go to the Exercise section and test all of our Python List Exercises:
+
+Python List Exercises
+"
+"python_dictionariesDictionaries are used to store data values in key:value pairs.
+A dictionary is a collection which is ordered*, changeable and do not 
+allow duplicates.
+As of Python version 3.7, dictionaries are ordered. 
+  In Python 3.6 and earlier, dictionaries are unordered.
+Dictionaries are written with curly brackets, and have keys and values:
+Create and print a dictionary:
+Dictionary items are ordered, changeable, and does not allow duplicates.
+Dictionary items are presented in key:value pairs, and can be referred to by 
+using the key name.
+Print the ""brand"" value of the dictionary:
+As of Python version 3.7, dictionaries are ordered. 
+  In Python 3.6 and earlier, dictionaries are unordered.
+When we say that dictionaries are ordered, it means that the items have a defined order, and that order will not change.
+Unordered means that the items does not 
+have a defined order, you cannot refer to an item by using an index.
+Dictionaries are changeable, meaning that we can change, add or remove items after the 
+dictionary has been created.
+Dictionaries cannot have two items with the same key:
+Duplicate values will overwrite existing values:
+To determine how many items a dictionary has, use the 
+len() function:
+Print the number of items in the dictionary:
+The values in dictionary items can be of any data type:
+String, int, boolean, and list data types:
+From Python's perspective, dictionaries are defined as objects with the data type 'dict':
+Print the data type of a dictionary:
+It is also possible to use the dict() constructor to make a dictionary.
+Using the dict() method to make a dictionary:
+There are four collection data types in the Python programming language:
+*Set items are unchangeable, but you can remove and/or add items 
+  whenever you like.
+**As of Python version 3.7, dictionaries are ordered. 
+  In Python 3.6 and earlier, dictionaries are unordered.
+When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security."
+"python_conditionsPython supports the usual logical conditions from mathematics:
+These conditions can be used in several ways, most commonly in ""if statements"" and loops.
+An ""if statement"" is written by using the if keyword.
+If statement:
+In this example we use two variables, a and b,
+which are used as part of the if statement to test whether b is greater than a.
+As a is 33, and b is 200,
+we know that 200 is greater than 33, and so we print to screen that ""b is greater than a"".
+Python relies on indentation (whitespace at the beginning of a line) to define scope in the code. Other programming languages often use curly-brackets for this purpose.
+
+
+Example
+If statement, without indentation (will raise an error):
+
+a = 33
+b = 200
+if b > a:
+print(""b is greater than a"")
+# you will get an error
+
+Try it Yourself »
+
+
+
+
+
+
+
+
+Elif
+The elif keyword is Python's way of saying ""if the previous conditions were not true, then 
+try this condition"".
+
+Example
+
+a = 33
+b = 33
+if b > a:
+	 
+	print(""b is greater than a"")
+elif a == b:
+	 
+	print(""a and b are equal"")
+
+Try it Yourself »
+
+In this example a is equal to b, so the first condition is not true, but the elif condition is true, so we print to screen that ""a and b are equal"".
+
+Else
+The else keyword catches anything which isn't caught by the preceding conditions.
+
+Example
+
+a = 200
+b = 33
+if b > a:
+	 
+	print(""b is greater than a"")
+elif a == b:
+	 
+	print(""a and b are equal"")
+  else:
+	 
+	print(""a is greater than b"")
+
+Try it Yourself »
+
+In this example a is greater than b,
+so the first condition is not true, also the elif condition is not true,
+so we go to the else condition and print to screen that ""a is greater than b"".
+You can also have an else without the
+elif:
+
+Example
+
+a = 200
+b = 33
+if b > a:
+	 
+	print(""b is greater than a"")
+  else:
+	 
+	print(""b is not greater than a"")
+
+Try it Yourself »
+
+
+Short Hand If
+If you have only one statement to execute, you can put it on the same line as the if statement.
+
+Example
+One line if statement:
+
+  if a > b: print(""a is greater than b"")
+
+Try it Yourself »
+
+
+Short Hand If ... Else
+If you have only one statement to execute, one for if, and one for else, you can put it 
+all on the same line:
+
+Example
+One line if else statement:
+
+  a = 2b = 330print(""A"") if a > b else print(""B"")
+Try it Yourself »
+
+
+This technique is known as Ternary Operators, or Conditional 
+  Expressions.
+
+You can also have multiple else statements on the same line:
+
+Example
+One line if else statement, with 3 conditions:
+
+  a = 330b = 330print(""A"") if a > b else print(""="") if a == b else print(""B"")
+Try it Yourself »
+
+
+And
+The and keyword is a logical operator, and 
+is used to combine conditional statements:
+
+Example
+Test if a is greater than
+  b, AND if c 
+  is greater than a:
+
+  a = 200b = 33c = 500if a > b and c > a:
+	 
+	print(""Both conditions are True"")
+
+Try it Yourself »
+
+
+Or
+The or keyword is a logical operator, and 
+is used to combine conditional statements:
+
+Example
+Test if a is greater than
+  b, OR if a 
+  is greater than c:
+
+  a = 200b = 33c = 500if a > b or a > c:
+	 
+	print(""At least one of the conditions is True"")
+
+Try it Yourself »
+
+
+Not
+The not keyword is a logical operator, and 
+is used to reverse the result of the conditional statement:
+
+Example
+Test if a is NOT greater than
+  b:
+
+  a = 33b = 200if not a > b:
+	 
+	print(""a is NOT greater than b"")
+
+Try it Yourself »
+
+
+Nested If
+You can have if statements inside 
+if statements, this is called nested
+if statements.
+
+Example
+
+  x = 41if x > 10:
+	 
+	print(""Above ten,"")  if x > 20:    print(""and 
+  also above 20!"")  else:    print(""but not 
+  above 20."")
+Try it Yourself »
+
+
+The pass Statement
+if statements cannot be empty, but if you 
+for some reason have an if statement with no content, put in the pass statement to avoid getting an error.
+
+Example
+
+  a = 33b = 200if b > a:  pass
+Try it Yourself »
+
+
+
+Test Yourself With Exercises
+
+Exercise:
+Print ""Hello World"" if a is greater than b.
+
+
+a = 50
+b = 10
+ a  b
+  print(""Hello World"")
+
+
+
+Submit Answer »
+Start the Exercise
+
+
+
+
+
+❮ Previous
+Next ❯
+
+
+
+
+
+
+
+
+
+
+
+★
++1
+
+
+
+If statement, without indentation (will raise an error):
+The elif keyword is Python's way of saying ""if the previous conditions were not true, then 
+try this condition"".
+In this example a is equal to b, so the first condition is not true, but the elif condition is true, so we print to screen that ""a and b are equal"".
+The else keyword catches anything which isn't caught by the preceding conditions.
+In this example a is greater than b,
+so the first condition is not true, also the elif condition is not true,
+so we go to the else condition and print to screen that ""a is greater than b"".
+You can also have an else without the
+elif:
+If you have only one statement to execute, you can put it on the same line as the if statement.
+One line if statement:
+If you have only one statement to execute, one for if, and one for else, you can put it 
+all on the same line:
+One line if else statement:
+This technique is known as Ternary Operators, or Conditional 
+  Expressions.
+You can also have multiple else statements on the same line:
+One line if else statement, with 3 conditions:
+The and keyword is a logical operator, and 
+is used to combine conditional statements:
+Test if a is greater than
+  b, AND if c 
+  is greater than a:
+The or keyword is a logical operator, and 
+is used to combine conditional statements:
+Test if a is greater than
+  b, OR if a 
+  is greater than c:
+The not keyword is a logical operator, and 
+is used to reverse the result of the conditional statement:
+Test if a is NOT greater than
+  b:
+You can have if statements inside 
+if statements, this is called nested
+if statements.
+if statements cannot be empty, but if you 
+for some reason have an if statement with no content, put in the pass statement to avoid getting an error.
+Print ""Hello World"" if a is greater than b.
+Start the Exercise"
+"python_while_loopsPython has two primitive loop commands:
+With the while loop we can execute a set of statements as long as a condition is true.
+Print i as long as i is less than 6:
+Note: remember to increment i, or else the loop will continue forever.
+The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i, 
+which we set to 1.
+With the break statement we can stop the loop even if the 
+while condition is true:
+Exit the loop when i is 3:
+With the continue statement we can stop the 
+current iteration, and continue with the next:
+Continue to the next iteration if i is 3:
+With the else statement we can run a block of code once when the 
+condition no longer is true:
+Print a message once the condition is false:
+Print i as long as i is less than 6.
+Start the Exercise"
+"python_for_loopsA for loop is used for iterating over a sequence (that is either a list, a tuple, 
+a dictionary, a set, or a string).
+This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.
+With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+Print each fruit in a fruit list:
+The for loop does not require an indexing variable to set beforehand.
+Even strings are iterable objects, they contain a sequence of characters:
+Loop through the letters in the word ""banana"":
+With the break statement we can stop the 
+loop before it has looped through all the items:
+Exit the loop when x is ""banana"":
+Exit the loop when x is ""banana"", 
+but this time the break comes before the print:
+With the continue statement we can stop the 
+current iteration of the loop, and continue with the next:
+Do not print banana:
+The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.
+Using the range() function:
+Note that range(6) is not the values of 0 to 6, but the values 0 to 5.
+The range() function defaults to 0 as a starting value, however it is possible to specify the starting value by adding a parameter: range(2, 6), which 
+means values from 2 to 6 (but not including 6):
+Using the start parameter:
+The range() function defaults to increment the sequence by 1,
+however it is possible to specify the increment value by adding a third parameter: range(2, 30, 3):
+Increment the sequence with 3 (default is 1):
+The else keyword in a
+for loop specifies a block of code to be 
+executed when the loop is finished:
+Print all numbers from 0 to 5, and print a message when the loop has ended:
+Note: The else block will NOT be executed if the loop is stopped by a break statement.
+Break the loop when x is 3, and see what happens with the 
+else block:
+A nested loop is a loop inside a loop.
+The ""inner loop"" will be executed one time for each iteration of the ""outer 
+loop"":
+Print each adjective for every fruit:
+for loops cannot be empty, but if you for 
+some reason have a for loop with no content, put in the pass statement to avoid getting an error.
+Loop through the items in the fruits list.
+Start the Exercise"
+"python_functionsA function is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a function.
+A function can return data as a result.
+In Python a function is defined using the def 
+keyword:
+To call a function, use the function name followed by parenthesis:
+Information can be passed into functions as arguments.
+Arguments are specified after the function name, inside the parentheses.
+You can add as many arguments as you want, just separate them with a comma.
+
+The following example has a function with one argument (fname).
+When the function is called, we pass along a first name,
+which is used inside the function to print the full name:
+
+Arguments are often shortened to args in Python documentations.
+The terms parameter and argument can be used for the same thing: information that are passed into a function.
+From a function's perspective:
+A parameter is the variable listed inside the parentheses in the function definition.
+An argument is the value that is sent to the function when it is called.
+By default, a function must be called with the correct number of arguments. 
+Meaning that if your function expects 2 arguments, you have to call the function 
+with 2 arguments, not more, and not less. 
+This function expects 2 arguments, and gets 2 arguments:
+This function expects 2 arguments, but gets only 1:
+If you do not know how many arguments that will be passed into your function,
+add a * before the parameter name in the function definition.
+This way the function will receive a tuple of arguments, and can access the items accordingly:
+If the number of arguments is unknown, add a * before the parameter name:
+Arbitrary Arguments are often shortened to *args in Python documentations.
+You can also send arguments with the key = value syntax.
+This way the order of the arguments does not matter.
+The phrase Keyword Arguments are often shortened to kwargs in Python documentations.
+If you do not know how many keyword arguments that will be passed into your function,
+add two asterisk: ** before the parameter name in the function definition.
+This way the function will receive a dictionary of arguments, and can access the items accordingly:
+If the number of keyword arguments is unknown, add a double
+  ** before the parameter name:
+Arbitrary Kword Arguments are often shortened to **kwargs in Python documentations.
+The following example shows how to use a default parameter value.
+If we call the function without argument, it uses the default value:
+You can send any data types of argument to a function (string, number, list, dictionary etc.), 
+and it will
+be treated as the same data type inside the function.
+E.g. if you send a List as an argument, it will still be a List when it 
+reaches the function:
+To let a function return a value, use the return 
+statement:
+function definitions cannot be empty, but if 
+you for some reason have a function definition with no content, put in the pass statement to avoid getting an error.
+Python also accepts function recursion, which means a defined function can call itself.
+Recursion is a common mathematical and programming concept. It means that a function calls itself. This has the benefit of meaning that you can loop through data to reach a result.
+The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, or one that uses excess amounts of memory or processor power. However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.
+In this example, tri_recursion() is a function that we have defined to call itself (""recurse""). We use the k variable as the data, which decrements (-1) every time we recurse. The recursion ends when the condition is not greater than 0 (i.e. when it is 0).
+To a new developer it can take some time to work out how exactly this works, best way to find out is by testing and modifying it.
+Recursion Example
+Create a function named my_function.
+Start the Exercise"
+"python_lambdaA lambda function is a small anonymous function.
+A lambda function can take any number of arguments, but can only have one expression.
+The expression is executed and the result is returned:
+Add 10 to argument a, and 
+  return the result:
+Lambda functions can take any number of arguments:
+Multiply argument a with argument 
+  b and return the 
+  result:
+Summarize argument a, 
+  b, and c and 
+  return the 
+  result:
+The power of lambda is better shown when you use them as an anonymous 
+function inside another function.
+Say you have a function definition that takes one argument, and that argument 
+will be multiplied with an unknown number:
+Use that function definition to make a function that always doubles the 
+number you send in:
+Or, use the same function definition to make a function that always triples the 
+number you send in:
+Or, use the same function definition to make both functions, in the same 
+program:
+Use lambda functions when an anonymous function is required for a short period of time.
+Create a lambda function that takes one parameter (a) and returns it.
+Start the Exercise"
+"python_arraysNote: Python does not have built-in support for Arrays, 
+  but Python Lists can be used instead.
+Note: This page shows you how to use LISTS as ARRAYS, however, to work with arrays in Python you will have to import
+  a library, like the NumPy library.
+Arrays are used to store multiple values in one single variable:
+Create an array containing car names:
+An array is a special variable, which can hold more than one value at a time.
+If you have a list of items (a list of car names, for example), storing the 
+cars in single variables could look like this:
+However, what if you want to loop through the cars and find a specific one? 
+And what if you had not 3 cars, but 300?
+The solution is an array!
+An array can hold many values under a single name, and you can 
+access the values by referring to an index number.
+You refer to an array element by referring to the index number.
+Get the value of the first array item:
+Modify the value of the first array item:
+Use the len() method to return the length of 
+an array (the number of elements in an array).
+Return the number of elements in the cars 
+array:
+Note: The length of an array is always one more than the highest array index.
+You can use the for in loop to loop through all the elements of an array.
+Print each item in the cars array:
+You can use the append() method to add an element to an array.
+Add one more element to the cars array:
+You can use the pop() method to remove an element from the array.
+Delete the second element of the cars array:
+You can also use the remove() method to remove an element from the array.
+Delete the element that has the value ""Volvo"":
+Note: The list's remove() method 
+  only removes the first occurrence of the specified value.
+Python has a set of built-in methods that you can use on lists/arrays.
+Note: Python does not have built-in support for Arrays, 
+  but Python Lists can be used instead."
+"python_classesPython is an object oriented programming language.
+Almost everything in Python is an object, with its properties and methods.
+A Class is like an object constructor, or a ""blueprint"" for creating objects.
+To create a class, use the keyword class:
+Create a class named MyClass, with a property named x:
+Now we can use the class named MyClass to create objects:
+Create an object named p1, and print the value of x:
+The examples above are classes and objects in their simplest form, and are 
+not really useful in real life applications.
+To understand the meaning of classes we have to understand the built-in __init__() 
+function.
+All classes have a function called __init__(), which is always executed when 
+the class is being initiated.
+Use the __init__() function to assign values to object properties, or other 
+operations that are necessary to do when the object 
+is being created:
+Create a class named Person, use the __init__() function to assign values 
+for name and age:
+Note: The __init__() function is called automatically every time the class is being used to create a new object.
+The __str__() function controls what should be returned when the class object 
+is represented as a string.
+If the __str__() function is not set, the string representation of the object 
+is returned:
+The string representation of an object WITHOUT the __str__() function:
+The string representation of an object WITH the __str__() function:
+Objects can also contain methods. Methods in objects are functions that 
+belong to the object.
+Let us create a method in the Person class:
+Insert a function that prints a greeting, and execute it on the p1 object:
+Note: The self parameter 
+  is a reference to the current instance of the class, and is used to access variables that belong to the class.
+The self parameter is a reference to the 
+current instance of the class, and is used to access variables that belongs to the class.
+It does not have to be named self , you can 
+call it whatever you like, but it has to be the first parameter of any function 
+in the class:
+Use the words mysillyobject and abc instead of self:
+You can modify properties on objects like this:
+Set the age of p1 to 40:
+You can delete properties on objects by using the 
+del keyword:
+Delete the age property from the p1 object:
+You can delete objects by using the del keyword:
+Delete the p1 object:
+class definitions cannot be empty, but if 
+you for some reason have a class definition with no content, put in the pass statement to avoid getting an error.
+Create a class named MyClass:
+Start the Exercise"
+"python_inheritanceInheritance allows us to define a class that inherits all the methods and properties from another class.
+Parent class is the class being inherited from, also called 
+base class.
+Child class is the class that inherits from another class, 
+also called derived class.
+Any class can be a parent class, so the syntax is the same as creating any 
+other class:
+Create a class named Person, with
+firstname and lastname properties, 
+and a printname method:
+To create a class that inherits the functionality from another class, send the parent class as a parameter when creating the child 
+class:
+Create a class named Student, which will inherit the properties 
+and methods from 
+the Person class:
+Note: Use the pass 
+  keyword when you do not want to add any other properties or methods to the 
+  class.
+Now the Student class has the same properties and methods as the Person 
+class.
+Use the Student class to create an object, 
+and then execute the printname method:
+So far we have created a child class that inherits the properties and methods 
+from its parent.
+We want to add the __init__() function to the child class (instead of the pass keyword).
+Note: The __init__() function is called automatically every time the class is being used to create a new object.
+Add the __init__() function to the
+Student class:
+When you add the __init__() function, the child class will no longer inherit 
+the parent's __init__() function.
+Note: The child's __init__() 
+  function overrides the inheritance of the parent's 
+  __init__() function.
+To keep the inheritance of the parent's __init__() 
+function, add a call to the 
+parent's __init__() function:
+Now we have successfully added the __init__() function, and kept the 
+inheritance of the parent class, and we are ready to add functionality in the
+__init__() function.
+Python also has a super() function that 
+will make the child class inherit all the methods and properties from its 
+parent:
+By using the super() function, you do not 
+have to use the name of the parent element, it will automatically inherit the 
+methods and properties from its parent.
+Add a property called graduationyear to the
+Student class:
+In the example below, the year 2019 should be a variable, and passed into the 
+Student class when creating student objects.
+To do so, add another parameter in the __init__() function:
+Add a year parameter, and pass the correct 
+year when creating objects:
+Add a method called welcome to the
+Student class:
+If you add a method in the child class with the same name as a function in 
+the parent class, the inheritance of the parent method will be overridden.
+What is the correct syntax to create a class named Student that will inherit properties and methods from a class named Person?
+Start the Exercise"
+"python_iteratorsAn iterator is an object that contains a countable number of values.
+An iterator is an object that can be iterated upon, meaning that you can 
+traverse through all the values.
+Technically, in Python, an iterator is an object which implements the 
+iterator protocol, which consist of the methods __iter__() 
+and __next__().
+Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable
+containers which you can get an iterator from.
+All these objects have a iter() method which is used to get an iterator:
+Return an iterator from a tuple, and print each value:
+Even strings are iterable objects, and can return an iterator:
+Strings are also iterable objects, containing a sequence of characters:
+We can also use a for loop to iterate through an iterable object:
+Iterate the values of a tuple:
+Iterate the characters of a string:
+The for loop actually creates an iterator object and executes the next() 
+method for each loop.
+To create an object/class as an iterator you have to implement the methods
+__iter__() and 
+__next__() to your object.
+As you have learned in the Python 
+Classes/Objects chapter, all classes have a function called
+__init__(), which allows you to do some 
+initializing when the object is being created.
+The __iter__() method acts similar, you can 
+do operations (initializing etc.), but must always return the iterator object 
+itself.
+The __next__() method also allows you to do 
+operations, and must return the next item in the sequence.
+Create an iterator that returns numbers, starting with 1, and each sequence 
+will increase by one (returning 1,2,3,4,5 etc.):
+The example above would continue forever if you had enough next() statements, or if it was used in a 
+for loop.
+To prevent the iteration from going on forever, we can use the 
+StopIteration statement.
+In the __next__() method, we can add a terminating condition to raise an error if the iteration is done a specified number of times:
+Stop after 20 iterations:"
+"python_polymorphismThe word ""polymorphism"" means ""many forms"", and in programming it refers to
+methods/functions/operators with the same name that can be executed on many 
+objects or classes.
+An example of a Python function that can be used on different objects is the 
+len() function.
+For strings len() returns the number of characters:
+For tuples len() returns the number of items 
+in the tuple:
+For dictionaries len() returns the number of key/value pairs 
+in the dictionary:
+Polymorphism is often used in Class methods, where we can have multiple 
+classes with the same method name.
+For example, say we have three classes: Car, 
+Boat, and Plane, and they all have 
+a method called move():
+Different classes with the same method:
+Look at the for loop at the end.
+Because of polymorphism we can execute the same method for all three classes.
+What about classes with child classes with the same name? Can we use polymorphism there?
+Yes. If we use the example above and make a parent class called 
+Vehicle, and make Car, 
+Boat, Plane
+child classes of Vehicle, the child classes 
+inherits the Vehicle methods, but can override 
+them:
+Create a class called Vehicle and make Car, 
+Boat, Plane
+  child classes of 
+  Vehicle:
+Child classes inherits the properties and methods from the parent class.
+In the example above you can see that the Car class is empty, but 
+it inherits brand, 
+model, and move() from
+Vehicle.
+The Boat and Plane classes also 
+inherit brand, model, 
+and move() from Vehicle, but they both override the 
+move() method.
+Because of polymorphism we can execute the same method for all classes."
+"python_datetimeA date in Python is not a data type of its own, but we can import a module 
+named datetime to work with dates as date 
+objects.
+Import the datetime module and display the current date:
+When we execute the code from the example above the result will be:
+The date contains year, month, day, hour, minute, second, and microsecond.
+The datetime module has many methods to return information about the date 
+object.
+Here are a few examples, you will learn more about them later in this 
+chapter: 
+Return the year and name of weekday:
+To create a date, we can use the datetime() class (constructor) of the
+datetime module.
+The datetime() class requires three parameters to create a date: year, 
+month, day.
+Create a date object:
+The datetime() class also takes parameters for time and timezone (hour, 
+minute, second, microsecond, tzone), but they are optional, and has a default 
+value of 0, (None for timezone).
+The datetime object has a method for formatting date objects into readable strings.
+The method is called strftime(), and takes one parameter, 
+format, to specify the format of the returned string:
+Display the name of the month:
+A reference of all the legal format codes:"
+"python_modulesConsider a module to be the same as a code library.
+A file containing a set of functions you want to include in your application.
+To create a module just save the code you want in a file with the file extension .py:
+Save this code in a file named mymodule.py
+Now we can use the module we just created, by using the import statement:
+Import the module named mymodule, and call the greeting function:
+Note: When using a function from a module, use the syntax: module_name.function_name.
+The module can contain functions, as already described, but also variables of 
+all types (arrays, dictionaries, objects etc):
+Save this code in the file mymodule.py
+Import the module named mymodule, and access the person1 dictionary:
+You can name the module file whatever you like, but it must have the file extension 
+.py
+You can create an alias when you import a module, by using the as keyword:
+Create an alias for mymodule called mx:
+There are several built-in modules in Python, which you can import whenever you like.
+Import and use the platform module:
+There is a built-in function to list all the function names (or variable 
+names) in a module. The dir() function:
+List all the defined names belonging to the platform module:
+Note: The dir() function can be used on all 
+  modules, also the ones you create yourself.
+You can choose to import only parts from a module, by using the from keyword.
+The module named mymodule has one function 
+and one dictionary:
+Import only the person1 dictionary from the module:
+Note: When importing using the from 
+  keyword, do not use the module name when referring to elements in the module. 
+  Example: person1[""age""], not
+mymodule.person1[""age""]
+What is the correct syntax to import a module named ""mymodule""?
+Start the Exercise"
+"python_jsonJSON is a syntax for storing and exchanging data.
+JSON is text, written with JavaScript object notation.
+Python has a built-in package called json, which can be used to work with JSON data.
+Import the json module:
+If you have a JSON string, you can parse it by using the
+json.loads() method.
+The result will be a Python dictionary.
+Convert from JSON to Python:
+If you have a Python object, you can convert it into a JSON string by 
+using the json.dumps() method.
+Convert from Python to JSON:
+You can convert Python objects of the following types, into JSON strings:
+Convert Python objects into JSON strings, and print the values:
+When you convert from Python to JSON, Python objects are converted into the JSON (JavaScript) equivalent:
+Convert a Python object containing all the legal data types:
+The example above prints a JSON string, but it is not very easy to read, with no indentations and line breaks.
+The json.dumps() method has parameters to 
+make it easier to read the result:
+Use the indent parameter to define the numbers 
+of indents:
+You can also define the separators, default value is ("", "", "": ""), which 
+means using a comma and a space to separate each object, and a colon and a space 
+to separate keys from values:
+Use the separators parameter to change the 
+default separator:
+The json.dumps() method has parameters to 
+order the keys in the result:
+Use the sort_keys parameter to specify if 
+the result should be sorted or not:"
+"python_mathPython has a set of built-in math functions, including an extensive math module, that allows you to perform mathematical tasks on numbers.
+The min() and max() functions can be used to find the lowest or highest value in an iterable:
+The abs() function returns the absolute (positive) value of the specified number:
+The pow(x, y) function returns the value of x to the power of y (xy).
+Return the value of 4 to the power of 3 (same as 4 * 4 * 4):
+Python has also a built-in module called math, which extends the list of mathematical functions.
+To use it, you must import the math module:
+When you have imported the math module, you 
+can start using methods and constants of the module.
+The math.sqrt() method for example, returns the square root of a number:
+The math.ceil() method rounds a number upwards to 
+its nearest integer, and the math.floor() 
+method rounds a number downwards to its nearest integer, and returns the result:
+The math.pi constant, returns the value of 
+PI (3.14...):
+In our Math Module Reference you will 
+find a complete reference of all methods and constants that belongs to the Math module."
+"python_pipPIP is a package manager for Python packages, or modules if you like.
+Note: If you have Python version 3.4 or later, PIP is included by default.
+A package contains all the files you need for a module.
+Modules are Python code libraries you can include in your project.
+Navigate your command line to the location of Python's script directory, and type the following:
+Check PIP version:
+If you do not have PIP installed, you can download and install it from this page:
+https://pypi.org/project/pip/
+
+Downloading a package is very easy.
+Open the command line interface and tell PIP to download the package you 
+want.
+Navigate your command line to the location of Python's script directory, and type the following:
+Download a package named ""camelcase"":
+Now you have downloaded and installed your first package!
+Once the package is installed, it is ready to use.
+Import the ""camelcase"" package into your project.
+Import and use ""camelcase"":
+Find more packages at https://pypi.org/.
+Use the uninstall command to remove a package:
+Uninstall the package named ""camelcase"":
+The PIP Package Manager will ask you to confirm that you want to remove the 
+camelcase package:
+Press y and the package will be removed.
+Use the list command to list all the packages installed on your system:
+List installed packages:
+Result:"
+"python_file_handlingFile handling is an important part of any web application.
+Python has several functions for creating, reading, updating, and 
+deleting files.
+The key function for working with files in Python is the
+open() function.
+The open() function takes two parameters;
+filename, and mode.
+There are four different methods (modes) for opening a file:
+""r"" - Read - Default value. Opens a 
+file for reading, error if the file does not exist
+""a"" - Append - Opens a file for 
+appending, creates the file if it does not exist
+""w"" - Write - Opens a file for writing, 
+creates the file if it does not exist
+""x"" - Create - Creates the specified file, returns 
+an error if the file exists
+In addition you can specify if the file should be handled as binary or text mode
+""t"" - Text - Default value. Text mode
+""b"" - Binary - Binary mode (e.g. 
+  images)
+To open a file for reading it is enough to specify the name of the file:
+The code above is the same as:
+Because ""r"" for read, and 
+""t"" for text are the default values, you do not need to specify them.
+Note: Make sure the file exists, or else you will get an error."
+"defaultNumPy is a Python library.
+NumPy is used for working with arrays.
+NumPy is short for ""Numerical Python"".
+We have created 43 tutorial pages for you to learn more about NumPy.
+Starting with a basic introduction and ends up with creating and plotting random data sets, and working with NumPy functions:
+Test your NumPy skills with a quiz test.
+Start NumPy Quiz
+Insert the correct method for creating a NumPy array.
+Start the Exercise
+In our ""Try it Yourself"" editor, you can use the NumPy module, and modify the code to see the result.
+Create a NumPy array:
+Click on the ""Try it Yourself"" button to see how it works."
+"numpy_ufunc_hyperbolicNumPy provides the ufuncs sinh(), cosh() and tanh() that take values in radians and produce the corresponding sinh, cosh and tanh values..
+Find sinh value of PI/2:
+Find cosh values for all of the values in arr:
+Finding angles from values of hyperbolic sine, cos, tan. E.g. sinh, cosh and tanh inverse (arcsinh, arccosh, arctanh).
+Numpy provides ufuncs arcsinh(), arccosh() and arctanh() that produce radian values for corresponding sinh, cosh and tanh values given.
+Find the angle of 1.0:
+Find the angle for all of the tanh values in array:"
