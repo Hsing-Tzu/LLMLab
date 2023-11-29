@@ -6,11 +6,6 @@ https://colab.research.google.com/drive/1XMsbNs6XIOiWrGhxLqI09H7xzjVWqvQl?usp=sh
 
 https://meet.google.com/bxo-ysue-ezs
 
-**Chat**
-I am Daisy. I am so beautiful.
-Today Kenny teacher
-So we can start now 
-Awesome!!!!!
 
 **11/2突然想到**
 > [name=劉彥谷]
@@ -652,22 +647,216 @@ trainer.train()
 ## 11/20｜Pre-Discussion
 
 
-|   | 11/29 | 12/6 |
-| -------- | -------- | -------- |
-| 主要進度     | Test the model     | PPT slides     |
-| Note |      |Group Name|
-| Daisy     | Text     | Text     |
-| Kenny     | Text     | Text     |
-| Mason     | Text     | Text     |
-| Jessica     | Text     | Text     |
+|   |11/22| 11/29 | 12/6 |
+| -------- | -------- | -------- |-------- |
+| 主要進度     | Get the Model| Test the model     | PPT slides     |
+| Note |      ||Group Name|
+| Daisy     |Study how to test the model|      | Text     |
+| Kenny     |Clean the python data 11/27 Morning|      | Text     |
+| Mason     |Study code for trainning model and train the model for python |      | Text     |
+| Jessica     |Study code for trainning model and train the model for python |      | Text     |
 
 **11/22**
-* Disscussion
+* Online Disscussion
     * 環境set up 
+    * Check the final code for trainning model
     * code for trainning the model
     * train harry potter
 * Home
-    * clean the python data *1 (Sat. 11/25)
-    * train the model for python *2
+    * clean the python data *1 (Mon. Morning 11/27)
+    * Study code for trainning model and train the model for python *2
         * Kenny CANNOT train the model because of his terrible MacBook Pro.
     * Study how to test the model *1
+## 11/22｜環境建置
+[tensorflow參考網址](https://discuss.tensorflow.org/t/tensorflow-not-detecting-gpu/16295/6)
+
+**大家都至少想一個Group Name**
+
+|  | Group Name 1 | Group Name 2 |
+| -------- | -------- | -------- |
+| Daisy     |   MDKJ (Mega Dialog Knowledge Jockey)   |   |
+| Kenny     |      |      |
+| Mason     |      |      |
+| Jessica   |CodePioneers(CP)    |      |
+## 11/27｜Pre-Disscussion
+[Bert-問答](https://medium.com/analytics-vidhya/question-answering-system-with-bert-ebe1130f8def)  
+[Bert-介紹](https://github.com/IKMLab/course_material/blob/master/bert-huggingface.ipynb)
+
+### Problems we need to solve
+* How do we get the model?(Or do we really need the model?)
+    * word2Vec - 從空的Model開始train
+        * We don't have that much data
+    * BERT - 透過已有的model繼續下去train
+        * But how about the code?
+    * fine-tunning - 微調
+        * Not we want
+* 專題方向
+    * 原本想解決：提問後會發散（且可以根據情境回答）
+    * 現在的問題：可能沒辦法得到正確回答（不能生成code）
+        * 那我們需要調整專題方向嗎？
+        * 即便我們用BERT成功把model生出來，我們可能也得不到正確回覆
+            * 也不一定可以透過情境問答
+        * How about 用 GPT-2加上python data去微調？
+            * 我們的創新？或許是我們可以自我檢測回覆是否是用戶所希望，直到相同，才回傳程式碼給用戶
+
+## 11/29｜BERT Code and PPT Discussion
+19:00 - 20:00 Serch and study the code
+
+21:00 - XX:00 Discuss the PPT and Group name
+
+> [name=Daisy]
+train from scratch BERT
+
+[BERT_from_scratch](https://github.com/antonio-f/BERT_from_scratch/blob/main/BERT_from_scratch.ipynb)
+
+[Finetune a Pre-trained Model](https://huggingface.co/docs/transformers/training)
+
+:::spoiler finetuning with asking question
+```python=
+def get_answer_using_bert(question, reference_text):
+  
+  bert_model = BertForQuestionAnswering.from_pretrained('bert-large-uncased-whole-word-masking-finetuned-squad')
+
+  bert_tokenizer = BertTokenizer.from_pretrained('bert-large-uncased-whole-word-masking-finetuned-squad')
+
+  input_ids = bert_tokenizer.encode(question, reference_text)
+  input_tokens = bert_tokenizer.convert_ids_to_tokens(input_ids)
+
+  sep_location = input_ids.index(bert_tokenizer.sep_token_id)
+  first_seg_len, second_seg_len = sep_location + 1, len(input_ids) - (sep_location + 1)
+  seg_embedding = [0] * first_seg_len + [1] * second_seg_len
+
+  model_scores = bert_model(torch.tensor([input_ids]), 
+  token_type_ids=torch.tensor([seg_embedding]))
+  ans_start_loc, ans_end_loc = torch.argmax(model_scores[0]), torch.argmax(model_scores[1])
+  result = ' '.join(input_tokens[ans_start_loc:ans_end_loc + 1])
+
+  result = result.replace('#', '')
+  return result
+
+reference_text = 'Mukesh Dhirubhai Ambani was born on 19 April 1957 in the British Crown colony of Aden (present-day Yemen) to Dhirubhai Ambani and Kokilaben Ambani. He has a younger brother Anil Ambani and two sisters, Nina Bhadrashyam Kothari and Dipti Dattaraj Salgaonkar. Ambani lived only briefly in Yemen, because his father decided to move back to India in 1958 to start a trading business that focused on spices and textiles. The latter was originally named Vimal but later changed to Only Vimal His family lived in a modest two-bedroom apartment in Bhuleshwar, Mumbai until the 1970s. The family financial status slightly improved when they moved to India but Ambani still lived in a communal society, used public transportation, and never received an allowance. Dhirubhai later purchased a 14-floor apartment block called Sea Wind in Colaba, where, until recently, Ambani and his brother lived with their families on different floors.'
+question = 'What is the name of mukesh ambani brother?'
+
+get_answer_using_bert(question, reference_text)
+```
+:::
+
+### 使上述的 PyTorch 程式碼使用 GPU 進行計算
+要使上述的 PyTorch 程式碼使用 GPU 進行計算，您需要確保幾件事情：
+
+1. **確認 CUDA 可用**: 首先，您需要檢查 CUDA 是否在您的系統上可用。可以使用 PyTorch 的 `torch.cuda.is_available()` 函數來進行這一檢查。
+
+2. **指定計算裝置**: 如果 CUDA 可用，您需要指定一個裝置（device），將其設為 `"cuda"`。否則，您可以回退到使用 CPU。
+
+3. **將模型和數據移至 GPU**: 您需要將您的模型和所有的輸入數據（如 `input_ids`, `attention_mask`, `labels`）移到 GPU 上。
+
+以下是對您的程式碼進行這些修改的範例：
+
+```python
+import torch
+from torch import nn
+from tqdm import tqdm
+
+# 檢查 CUDA 是否可用並設置裝置
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# 模型初始化和優化器設置
+model = ...  # 替換為您的模型
+optim = ...  # 替換為您的優化器
+model.to(device)  # 將模型移至設定的裝置
+
+epochs = 2
+
+for epoch in range(epochs):
+    # setup loop with TQDM and dataloader
+    loop = tqdm(loader, leave=True)
+    for batch in loop:
+        # initialize calculated gradients (from prev step)
+        optim.zero_grad()
+
+        # pull all tensor batches required for training
+        # 確保所有輸入數據也移至 GPU
+        input_ids = batch['input_ids'].to(device)
+        attention_mask = batch['attention_mask'].to(device)
+        labels = batch['labels'].to(device)
+
+        # process
+        outputs = model(input_ids, attention_mask=attention_mask, labels=labels)
+
+        # extract loss
+        loss = outputs.loss
+
+        # calculate loss for every parameter that needs grad update
+        loss.backward()
+
+        # update parameters
+        optim.step()
+
+        # print relevant info to progress bar
+        loop.set_description(f'Epoch {epoch}')
+        loop.set_postfix(loss=loss.item())
+```
+
+請確保在使用 CUDA 之前，您的系統已經安裝了適當的 NVIDIA 驅動程式和 CUDA 工具包。此外，您的 PyTorch 版本也需要支持 CUDA。
+![image](https://hackmd.io/_uploads/B1qd0jESa.png)
+
+---
+**什麼是PyTorch/tensor flow**
+> 一個別人寫好的東西可以把Python寫給CPU算的程式改成用GPU計算
+
+
+**CUDA?**
+> GPU最小的單位叫做CUDA，是一個硬體單位，類似核心的概念。
+
+**所以總而言之要把計算的方式改為GPU，該如和設定？**
+>GPU要在以下的網址中才可以成功運作 > https://developer.nvidia.com/cuda-gpus
+>
+> 要確定CUDA版本、Pytorch的版本一致。
+> 
+> CUDNN軟體確定你是什麼單位（研究單位）
+>
+>下載CUDA，CUDNN解壓縮，裡面的東西拖進CUDA對應資料夾 => 環境設定完成
+
+
+---
+
+|  | To Do |  |
+| -------- | -------- | -------- |
+| Daisy     |      |      |
+| Kenny     |      |      |
+| Mason     |   Teach Us All About GPU Computing    |      |
+| Jessica   |      |      |
+
+## PPT
+[官方簡報](https://sites.google.com/view/2024coding101/download?authuser=0)
+* 隊伍介紹
+    * 一個人想一個自我介紹
+        * 為什麼會想要參加coding101
+        * 扮演什麼角色
+    * 團隊名稱
+        * 為什麼叫這個團名
+        * 團隊理念、團隊介紹
+* 創作理念
+    * 為什麼要做這個專題？
+        * 想解決什麼？
+        * 目標用途
+        * 目標族群
+* 成果說明
+    * 自動測試(擷取程式碼去問問題)
+    * 模型
+* BERT vs Fine-tunning
+* 學習、心路歷程
+    1. word2Vec
+    2. BERT from Scratch
+    3. Fine-tuning a Pre-trained Model
+* 程式說明
+    * 自動測試(擷取程式碼去問問題)
+    * 模型
+        * word2Vec
+        * BERT from Scratch
+        * Pre-train
+        * Fine-tuning
+* 其他補充
+    * 未來會做到什麼(GPT-2)
+
+
