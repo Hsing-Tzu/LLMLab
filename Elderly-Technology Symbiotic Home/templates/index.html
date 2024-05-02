@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>老人科技共生宅</title>
+</head>
+<body class="flex-container">
+    <div class="container" id="container">
+        <br>
+        <br>
+        <a href="https://www.facebook.com/share/chJv759UwFXfE9oW/?mibextid=LQQJ4d" target="_blank">
+            <img src="{{ url_for('static', filename='peculab.jpeg') }}" width=auto height="50px">
+        </a>
+        <h1>老人科技共生宅</h1>
+        <h4>Elderly-Technology Symbiotic House</h4>
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <hr style="border: 0.75px solid; width: 100%; color: rgb(198, 198, 198);"/>
+            <br>
+        </div>
+        
+        <h2>系統控制</h2>
+        <div>
+            <button onclick="toggleLight(11, true)" id="button-1">瓦斯 On</button>
+            <button onclick="toggleLight(11, false)" id="button-1">瓦斯 Off</button>
+            <button onclick="toggleLight(12, true)" id="button-1">警報器 On</button>
+            <button onclick="toggleLight(12, false)" id="button-1">警報器 Off</button>
+            <button onclick="toggleLight(13, true)" id="button-1">LINE通知 On</button>
+            <button onclick="toggleLight(13, false)" id="button-1">LINE通知 Off</button>
+            <button onclick="toggleLight(14, true)" id="button-1">燈 On</button>
+            <button onclick="toggleLight(14, false)" id="button-1">燈 Off</button>
+            <br>
+            <button onclick="toggleLight(15, true)" id="button-1">冷氣 On</button>
+            <button onclick="toggleLight(15, false)" id="button-1">冷氣 Off</button>
+            <button onclick="toggleLight(16, true)" id="button-1">其他 On</button>
+            <button onclick="toggleLight(16, false)" id="button-1">其他 Off</button>
+            <br>
+            <button onclick="storeMedicineData()" id="button-1"> 吃藥</button>
+        </div>
+        <br>
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <hr style="border: 0.75px solid; width: 100%; color: rgb(198, 198, 198);"/>
+            <br>
+        </div>
+        
+        <h2>居家攝影機畫面</h2>
+        <br>
+        <video id="video" width="320" height="240" autoplay></video>
+        <br>
+        <button onclick="startCamera()">啟動伺服器 Start server</button>
+        <h3 id="captureStatus"></h3>
+        <br>
+        <h2>Talk to LLM</h2>
+        <button onclick="startRecording()">開始 Start</button>
+        <button onclick="stopRecording()" disabled>停止 Stop</button>
+        <br>
+        <br>
+        <br>
+        <h3 id="transcriptionResult">等待指令...</h3>
+        <br>
+        <button onclick="handleTextObtained()">audio</button>
+        <audio id="audioPlayer" controls></audio>
+        <br>
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <hr style="border: 0.75px solid; width: 100%; color: rgb(198, 198, 198);"/>
+            <br>
+        </div>
+        <br>
+        <p>Through AI, achieve elderly home safety, behavior prediction, daily health exercises, risk prevention, and lifestyle assistance.</p>
+
+        <p>
+            <span>Pecu Tsai</span>｜
+            <span><span></span>Kenny Liu</span>｜
+            <span><span></span>Mason Li</span>｜
+            <span><span></span>Daisy Ko</span>｜
+            <span><span></span>Jessica Lin</span>
+        </p>
+        
+        
+        <a href="https://www.facebook.com/share/chJv759UwFXfE9oW/?mibextid=LQQJ4d" target="_blank">
+            <img src="{{ url_for('static', filename='peculab.jpeg') }}" width=auto height="50px">
+        </a>
+    </div>
+</body>
+<body>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+            background-image: url('/static/background.png'); 
+            background-size: cover; 
+            background-attachment: fixed; 
+        }
+        p {
+            margin-top: 10px;  
+            margin-bottom: 10px; 
+        }
+        .flex-container .container a {
+            display: block;     
+            width: 100%;          
+            text-align: center;   
+        }
+        .flex-container .container img {
+            display: inline;     
+            height: 50px;        
+            width: auto;          
+        }
+        .container {
+            position: relative;
+            bottom: 0;
+            width: calc(100% - 500px); 
+            padding: 20px;
+            margin-left: 0px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin-top: 0px;
+        }
+        button {
+            height: 35px;
+            width: 250px;
+            font-size: 13px;
+            margin-top: 20px;
+            margin-right: 20px;
+            background-color: rgb(211, 211, 211);
+            color: black;
+            border-radius: 50px;
+            transition: background-color 0.2s, box-shadow 0.2s;
+            border: none;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+        }
+
+        button:hover {
+            background-color: rgb(87, 87, 87);
+            color: rgb(255, 255, 255);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+        }
+
+        #button-1 {
+            height: 35px;
+            width: 100px;
+            font-size: 13px;
+            margin-top: 20px;
+            margin-right: 20px;
+            background-color: rgb(211, 211, 211); 
+            color: rgb(35, 35, 35);
+            border-radius: 50px; 
+            transition: background-color 0.2s; 
+            border: none;
+        }
+        #button-1:hover {
+            background-color: rgb(124, 122, 122); 
+            color: white;
+        }
+        h1 {
+            font-size: 320%;
+            color: #2b2b2b;
+            margin-top: 0%;
+            margin-bottom: 0%;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+        h2 {
+            color: #2b2b2b;
+            margin-bottom: 0%;
+        }
+        h3 {
+            color: #2b2b2b;
+            margin-top: 0%;
+            margin-left: 4px;
+        }
+        h4 {
+            color: #4d4d4d;
+            margin-top: 10px;
+            margin-bottom: 7px;
+            text-align: center;
+        }
+        p {
+            color: #4d4d4d;
+            text-align: center;
+        }
+        p span {
+            margin-right: 10px; 
+        }
+        #video {
+            border-radius: 15px; 
+            box-shadow: 2px 2px 16px rgba(0,0,0,0.5); 
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+        #video:hover {
+            box-shadow: 2px 2px 32px rgba(0,0,0,0.7);
+        }
+    </style>
+    <script>
+        function startCamera() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => {
+                    document.getElementById('video').srcObject = stream;
+                    startPeriodicCapture();
+                })
+                .catch(error => console.error('Error accessing the camera:', error));
+        }
+
+        function startPeriodicCapture() {
+            setInterval(() => {
+                captureImage();
+            }, 5000);
+        }
+
+        function captureImage() {
+            const video = document.getElementById('video');
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+            canvas.toBlob(blob => {
+                sendImageToServer(blob);
+            });
+        }
+
+        function sendImageToServer(blob) {
+            const formData = new FormData();
+            formData.append("img", blob, "image.png");
+            fetch('/capture', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("captureStatus").innerText = 'Capture Status: ' + data.status;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+    </script>
+
+    <script>
+        function toggleLight(lightNumber, turnOn) {
+            const action = turnOn ? 'on' : 'off';
+            fetch(`/toggle-light/${lightNumber}/${action}`, {
+                method: 'POST'
+            })
+            .then(response => response.text())
+        }
+    </script>
+    
+    <script>
+        function storeMedicineData(dataToSend) {
+            fetch('/store-medicine-data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ data: dataToSend })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Data stored successfully:', data);
+            })
+            .catch(error => {
+                console.error('Error storing data:', error);
+            });
+        }
+    </script>
+
+    <script>
+        let mediaRecorder;
+        let audioChunks = [];
+
+        function startRecording() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    mediaRecorder.start();
+                    mediaRecorder.addEventListener("dataavailable", event => {
+                        audioChunks.push(event.data);
+                    });
+                    mediaRecorder.addEventListener("stop", () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                        sendAudioToServer(audioBlob);
+                        audioChunks = [];
+                    });
+                    document.querySelector("button[onclick='startRecording()']").disabled = true;
+                    document.querySelector("button[onclick='stopRecording()']").disabled = false;
+                });
+        }
+
+        function stopRecording() {
+            mediaRecorder.stop();
+            document.querySelector("button[onclick='startRecording()']").disabled = false;
+            document.querySelector("button[onclick='stopRecording()']").disabled = true;
+}
+function sendAudioToServer(audioBlob) {
+        const formData = new FormData();
+        formData.append("file", audioBlob, "recording.wav");
+        fetch('/transcribe', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('', data);
+            document.getElementById("transcriptionResult").innerText = '' + data.transcription;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+</script>
+<script>
+    function convertTextToSpeech(text) {
+        fetch('/text-to-speech', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({text: text})
+        })
+        .then(response => response.blob())
+        .then(blob => {
+            const url = URL.createObjectURL(blob);
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = url;
+            audioPlayer.play();
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function handleTextObtained() {
+        const text = document.getElementById('transcriptionResult').innerText;
+        convertTextToSpeech(text);
+    }
+</script>
+</body>
+</html>
